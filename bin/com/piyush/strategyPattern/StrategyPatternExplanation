@@ -1,0 +1,30 @@
+1Strategy design pattern is based upon open closed design principle, the 'O' of famous SOLID design principles.
+Strategy pattern allows you to encapsulate possible changes in a process and encapsulate that in a Strategy class. 
+By doing that your process (mainly a method) depends upon a strategy, higher level of abstraction than implementation. 
+This makes your process open for extension by providing new Strategy implementation, but closed for modification, 
+because the introduction of a new strategy doesn't require a change in a tested method.
+
+Strategy pattern is very useful, especially for implementing algorithmic strategy e.g. encryption, compression, comparison etc. 
+A couple of examples of Strategy pattern from JDK is Comparator and LayoutManager. 
+You can view Comparator as Strategy interface, define compare() method, now it's up to the classes how they compare themselves.
+
+This method is utilized for sorting inside Collections.sort(), which confirms OCP because it doesn't require any change when comparison logic changes. 
+Similarly LayoutManager e.g. GridLayout, BorderLayout helps you to organize components differently.
+
+------------------------------------------------------------------------------------------------------
+In this example, we need to filter the Incoming message by certain criterion e.g. filter message if it's of a particular type. 
+But you know that this criterion can change, and you may need to filter the message by their size or a specific keyword in their content. In the center of this operation, we have a filter() method in a class say MessageUtils, this class is responsible for filtering messages.
+
+In the simplest form, just removing them from incoming List of Messages.
+
+In order to Strategy pattern, we will define a Strategy interface say FilteringStrategy which contains isFilterable(Message msg) method, this method returns true if Message passed to it is filterable by criteria, implemented by subclasses.
+
+This design makes it very easy to introduce a new strategy. We have three implementations of this Strategy interface FilterByType, FilterBySize, and FilteryByKeyword.
+
+
+
+
+
+ 
+
+

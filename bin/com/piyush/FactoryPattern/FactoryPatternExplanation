@@ -1,0 +1,14 @@
+Factory method is a creational design pattern, i.e., related to object creation. 
+In Factory pattern, we create object without exposing the creation logic to client and the client use the same common interface to create new type of object.
+The idea is to use a static member-function (static factory method) which creates & returns instances, hiding the details of class modules from user.
+
+Let’s see an example of how factory pattern is implemented in Code.
+We have requirement to create multiple currency e.g. INR, SGD, USD and code should be extensible to accommodate new Currency as well. 
+Here we have made Currency as interface and all currency would be concrete implementation of Currency interface. 
+Factory Class will create Currency based upon country and return concrete implementation which will be stored in interface type. 
+This makes code dynamic and extensible.
+
+Factory method design pattern decouples the calling class from the target class, which result in less coupled and highly cohesive code?
+E.g.: JDBC is a good example for this pattern; application code doesn't need to know what database it will be used with, so it doesn't know what database-specific driver classes it should use. Instead, it uses factory methods to get Connections,
+
+
