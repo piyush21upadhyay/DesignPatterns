@@ -1,0 +1,20 @@
+Adapter design pattern in Java, also known as the Wrapper pattern is another very useful GOF pattern, 
+which helps to bridge the gap between two classes in Java. As per the list of Gang of Four patterns, 
+Adapter is a structural pattern, much like Proxy, Flyweight, Facade, and Decorator pattern in Java. 
+As the name suggest, Adapter allows two classes of a different interface to work together, without changing any code on either side. 
+You can view Adapter pattern is a central piece of the puzzle, which joins two pieces, which can not be directly joined because of different interfaces.
+Adapter design pattern makes incompatible interfaces work together, without changing them. 
+
+How to implement Adapter Design pattern in Java
+There are two ways to implement Adapter design pattern in Java, one using Inheritance also known as Class Adapter pattern and other is using Composition,
+ better known as Object Adapter pattern.
+
+If you remember the java.util.Map has no way to automatically load a two-dimensional array of objects into a Map as key-value pairs. We can create an adapter class that does this.
+
+Sometimes the problem you are solving is as simple as "I don't have the interface I want". Two of the patterns in the list of GOF design patterns, Adapter, and Facade pattern solve this problem by providing an alternate interface. Adapter pattern takes whatever interface you have and produce the interface you need. While Facade pattern provides a simpler interface to deal with a number of classes or bundle of resources.
+
+Here is my implementation of Adapter pattern in Java to convert a two-dimensional array of objects into Map of key-value pairs
+
+
+
+
